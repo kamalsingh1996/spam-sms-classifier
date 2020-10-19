@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spam Ham Classifier</title>
+
+	<style type="text/css">
+
+
+				body{
+
+				}
+
+				#firstbox{
+						animation:change 15s infinite;
+						height:100px;
+				}
+
+
+				@keyframes change{
+				0%{ background-color:Dark Sand;}
+				20%{ background-color:Dark Sand;}
+				40%{ background-color:Dark Sand;}
+				60%{background-color:skyblue;}
+				80%{ background-color:99738E;}
+				100%{ background-color:99738E;}
+				}
+
+				h1{
+
+					text-align: center;
+					letter-spacing: 1px;
+					padding-top: 30px;
+					color: black;
+				}
+
+
+				.text{
+					border-width: 4px;
+					border-radius: 10px;
+					border-color: lightgreen;
+					font-size: 15px;
+					font-family: Comic Sans MS;
+					letter-spacing: 2px;
+				}
+				
+				
+
+				#secondbox{
+					text-align: center;
+					margin-top:50px;
+					color:red;
+					font-size:20px;
+				}
+
+
+
+				.footer{
+					margin-top:30px;
+					text-align: center;
+					background-color: lightgrey;
+					font-size:15px;
+					font-family: Comic Sans MS;
+				}
+
+
+				.myButton{
+					font-size: 20px;
+					border-radius: 10px;
+					background-color: black;
+					color: white;
+					padding: 10px 5px;
+					font-family: Comic Sans MS;
+				}
+
+	</style>
+
+</head>
+<body>
+	
+	<div id='firstbox'>
+	<h1 style="font-family:Comic Sans MS">SPAM OR HAM SMS CLASSIFIER APPLICATION.</h1>
+	</div>
+
+
+	<div id='secondbox'>
+	
+				{% if prediction==1 %}
+				
+					<img alt='spam message' src='static/spam.jpg' width='300' height='300' style="border:2px solid black"></a>
+					
+					<p style="font-family:Comic Sans MS" class='spam_message'>WARNING ! SPAM message ! DETECTED.</p>
+
+
+				{% elif prediction==0 %}
+				
+					<img alt='ham message' src='static/ham.jpg' width='300' height='300' style="border:2px solid black"></a>
+				
+					<p style="font-family:Comic Sans MS" class='ham_message'>OKkk...  You Got A New Message.</p>
+					
+
+				{% endif %}
+
+		
+	</div>
+
+				<div class='footer'>
+				<a href="https://www.kaggle.com/ksquare30">
+				<img alt='Kaggle link' src='static/kaggle1.png' width='20' height='20' style="border:2px solid black"></a>
+				
+				<a href="https://github.com/kamalsingh1996">
+				<img alt='Github link' src='static/g1.jpg' width='23' height='20' style="border:2px solid black"></a>
+				
+				<a href="https://www.linkedin.com/in/k-square-69a72717a/">
+				<img alt='LinkdIn link' src='static/lkdn1.jpg' width='20' height='20' style="border:2px solid black"></a>
+				
+				<br>
+				<b>Made by Kamal Singh</b>
+				</div>
+
+
+</body>
+</html>
